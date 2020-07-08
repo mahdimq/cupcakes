@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>CupCakes</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1 class="display-3 text-center">Welcome to CupCakes</h1>
+    <hr>
+    <div class="container">
+      <h2>Add a new cupcake!</h2>
+
+      <div class="row">
+        <div class="col-md-6">
+          <form class="cupcake-form" method="POST">
+            <div class="form-group">
+              <label for="flavor">Cupcake Flavor</label>
+              <input type="text" class="form-control" id="flavor" name="flavor" required>
+            </div>
+            <div class="form-group">
+              <label for="rating">Cupcake Rating</label>
+              <input type="number" min="0" max="10" class="form-control" id="rating" name="rating" required>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="url" class="form-control" id="image" name="image">
+          </div>
+          <div class="form-group">
+            <label for="size">Cupcake Size</label>
+            <input type="text" class="form-control" id="size" name="size" required>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success">Submit</button>
+      </form>
+
+    </div>
+    <hr>
+
+    <div class="container">
+      <div id="cupcake-display" class="row justify-content-center">
+
+        <!-- Temporary display of cupcakes -->
+        <!-- {% for cupcake in cupcakes %}
+          <div class="col-md-3 col-sm-5 cupcake-display">
+            <h3>{{cupcake.flavor}}</h3>
+            <p>Cupcake Rating: {{cupcake.rating}}</p>
+            <p>Cupcake Size: {{cupcake.size}}</p>
+            <img class="img-thumbnail" src="{{cupcake.image}}" alt="cupcake image">
+          </div>
+          {% endfor %} -->
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+    integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="static/app.js"></script>
+</body>
+
+</html>

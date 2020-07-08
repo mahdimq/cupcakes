@@ -1,0 +1,39 @@
+@BASE_URL = http://127.0.0.1:5000/api/cupcakes
+
+GET {{BASE_URL}}
+# Get all cupcakes - GET REQUEST
+Content-Type: application/json
+###
+
+GET {{BASE_URL}}/4
+# Get a single cupcake - GET REQUEST
+Content-Type: application/json
+###
+
+POST {{BASE_URL}}
+# Add a new cupcake - POST REQUEST
+Content-Type: application/json
+
+  {
+    "flavor":"Banana",
+    "rating":7,
+    "size":"small"
+  }
+###
+
+PATCH {{BASE_URL}}/27
+# Edit a single cupcake - PATCH REQUEST
+Content-Type: application/json
+
+  {
+    "flavor": "Banana Cinnemon",
+    "rating": 8,
+    "size": "large",
+    "image": "https://tinyurl.com/y9jur236"
+  }
+
+###
+
+DELETE {{BASE_URL}}/21
+# Delete a single cupcake - DELETE REQUEST
+Content-Type: application/json
